@@ -25,24 +25,24 @@
       with_items:
         - /home/ubuntu/mesh_prediction_api/PubMed_daily
         - /home/ubuntu/backups/
-    - name: "Copy large files from ..." # TODO where to download
-      copy:
-        src: "{{ item }}"
-        dest: /home/ubuntu/
-      with_items:
-        - bert_best_finetuned.h5
-        - neuro2.tar.gz 
-        - PubMed_daily-2020_02_25.tar.gz
-    - name: "Extract neuro2.db"
-      unarchive: 
-        src: "/home/ubuntu/mesh_prediction_api/neuro2.tar.gz"
-        dest: "/home/ubuntu/mesh_prediction_api/" 
-        remote_src: yes
-    - name: "Extract PubMed_daily"
-      unarchive:
-        src: "/home/ubuntu/mesh_prediction_api/PubMed_daily-2020_02_25.tar.gz"
-        dest: "/home/ubuntu/mesh_prediction_api/PubMed_daily/"  
-        remote_src: yes
+#    - name: "Copy large files from ..." # TODO where to download
+#      copy:
+#        src: "{{ item }}"
+#        dest: /home/ubuntu/
+#      with_items:
+#        - bert_best_finetuned.h5
+#        - neuro2.tar.gz 
+#        - PubMed_daily-2020_02_25.tar.gz
+#    - name: "Extract neuro2.db"
+#      unarchive: 
+#        src: "/home/ubuntu/mesh_prediction_api/neuro2.tar.gz"
+#        dest: "/home/ubuntu/mesh_prediction_api/" 
+#        remote_src: yes
+#    - name: "Extract PubMed_daily"
+#      unarchive:
+#        src: "/home/ubuntu/mesh_prediction_api/PubMed_daily-2020_02_25.tar.gz"
+#        dest: "/home/ubuntu/mesh_prediction_api/PubMed_daily/"  
+#        remote_src: yes
     - name: "Install packages"
       apt:
         pkg: 
