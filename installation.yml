@@ -3,7 +3,8 @@
 
 ---
 
-- hosts: all
+- hosts: localhost
+  connection: local
   user: ubuntu
   become: true
   tasks:
