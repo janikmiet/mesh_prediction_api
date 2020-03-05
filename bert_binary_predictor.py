@@ -27,7 +27,7 @@ custom_objects["binary_recall"] = keras_metrics.binary_recall()
 model = load_model(sys.argv[1], custom_objects=custom_objects)
 
 graph = tf.get_default_graph()
-tokenizer = tokenization.FullTokenizer("../biobert_pubmed/vocab.txt", do_lower_case=False)
+tokenizer = tokenization.FullTokenizer("./biobert_pubmed/vocab.txt", do_lower_case=False)
 
 def tokenize(abstracts, maxlen=512):
     ret_val = []

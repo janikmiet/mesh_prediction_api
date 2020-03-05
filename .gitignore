@@ -1,1 +1,8 @@
 __pycache__/
+.Rproj.user
+bert_best_finetuned.h5
+neuro2.db
+PubMed_daily/
+*.xml.gz
+_bigfilelist.txt
+bigfiles.tar

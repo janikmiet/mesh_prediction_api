@@ -1,7 +1,7 @@
 #!/bin/bash
 
 curr_wrk_dir=$(pwd)
-base_folder=/change/me
+base_folder=/home/ubuntu/mesh_prediction_api/PubMed_daily/ # TODO
 prev_folder=$base_folder$(python check_previous_folder.py -i $base_folder)
 echo $prev_folder
 

@@ -3,7 +3,7 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
-db = sqlite3.connect("../neuro2.db", check_same_thread=False)
+db = sqlite3.connect("./neuro2.db", check_same_thread=False)
 db.row_factory = sqlite3.Row
 
 def page_limits(per_page=None, page_number=None):

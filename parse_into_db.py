@@ -8,10 +8,10 @@ import bert_multilabel_predictor
 
 # Note to self: using `set()` here makes the `mesh in neuro_mesh_ids`
 # later in the code WAY faster, by about 70x!
-with open("../mesh_ids.json") as f:
+with open("./mesh_ids.json") as f:
     neuro_mesh_ids = set(json.load(f))
 
-db = sqlite3.connect("../neuro2.db", timeout=30)
+db = sqlite3.connect("./neuro2.db", timeout=30)
 
 def get_mesh(input_file):
     

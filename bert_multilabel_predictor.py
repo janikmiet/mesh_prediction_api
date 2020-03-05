@@ -20,16 +20,16 @@ maxlen = 512
 custom_objects = get_custom_objects()
 custom_objects["tf"] = tf
 
-model = load_model("../bert_best_finetuned.h5", custom_objects=custom_objects)
+model = load_model("./bert_best_finetuned.h5", custom_objects=custom_objects)
 
 with open("../old_complete_output.json_class_labels.txt") as f:
     label_mapping = np.array(json.load(f))
 
-with open("../mesh_mapping.json") as f:
+with open("./mesh_mapping.json") as f:
     mesh_mapping = json.load(f)
 
 graph = tf.get_default_graph()
-tokenizer = tokenization.FullTokenizer("../biobert_pubmed/vocab.txt", do_lower_case=False)
+tokenizer = tokenization.FullTokenizer("./biobert_pubmed/vocab.txt", do_lower_case=False)
 
 def make_multilabel_prediction(abstract):
 
